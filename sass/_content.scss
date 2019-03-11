@@ -4,18 +4,30 @@
   width: 75%;
   padding: 5rem;
   background-color: #fff;
+  // MEDIA QUERIES
+  @include respond(tab-port){
+    width: 100%;
+    padding: 1.5rem;
+  }
+  @include respond(small-phone){
+    padding: .5rem;
+  }
     // HEADER SECTION
 .title {
   &__heading{
     margin-top: 7rem;
-
+      // MEDIA QUERIES
+   @include respond(phone){
+    font-size: 32px;
+    }
+    @include respond(small-phone){
+      font-size: 28px;
+    }
   }
   &__paragraph{
     margin: 1rem 0;
     font-size: 18px;
     line-height: 22px;
-
-
   }
   &__author{
     font-size: 11px;
@@ -62,26 +74,46 @@
       padding: 1.5rem 0;
       border-top: 1px solid #DEDEDE;
       border-bottom: 1px solid #DEDEDE;
+      // MEDIA QUERIES
+      @include respond(small-phone){
+        padding: .5rem 0;
+      }
 
       &__left{
         list-style: none;
         &__items{
           font-family: Helvetica, sans-serif;
           font-size: 13px;
+          // MEDIA QUERIES
+          @include respond(phone){
+            font-size: 12px;
+          }
+
+          
           &--title{
             font-size: 15px;
             line-height: 22px;
             text-transform: uppercase;
             font-weight: 900;
             padding: 1px 0;
-            color: #DC3529
+            color: #DC3529;
+            // MEDIA QUERIES
+            @include respond(small-phone){
+              font-size: 12px;
+            }
+        
           }
           &--bold{
             font-size: 14px;
             text-transform: uppercase;
             font-weight: 900;
-            line-height: 22px;
+            line-height: 18px;
             padding: 1px 0;
+                 // MEDIA QUERIES
+                 @include respond(small-phone){
+                  font-size: 12px;
+                  line-height: 14px;
+                }
           }
           &--blue{
             margin-top: 3px;
@@ -93,14 +125,23 @@
       &__figure{
         &__img{
           width: 250px;
+          // MEDIA QUERIES
+          @include respond(small-phone){
+            width: 190px;
+          }
         }
       }
       &__right{
-        
         display: flex;
         align-items: center;
         list-style: none;
         margin-bottom: 3rem;
+        // MEDIA QUERIES
+        @include respond(small-phone){
+       flex-direction: column;
+       margin-bottom: .5rem;
+        }
+        
         &__items{
           font-size: 28px;
           line-height: 26px;
@@ -108,7 +149,16 @@
           text-align: center;
           padding: 0 2rem;
           color: #666;
-         
+
+          // MEDIA QUERIES
+          @include respond(phone){
+            font-size: 22px;
+            padding: 0 .8rem;
+          }
+            @include respond(small-phone){
+            font-size: 15px;
+            padding: 0 .4rem;
+          }
         }
         &__caption{
           font-size: 10px;
@@ -117,6 +167,11 @@
           padding: 0 2rem;
           border-right: 1px solid #DEDEDE;
           border-left: 1px solid #DEDEDE;
+          @include respond(small-phone){
+           border: none;
+           padding: 0;
+
+          }
         }
       }
     }

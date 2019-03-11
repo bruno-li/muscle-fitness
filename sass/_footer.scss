@@ -15,6 +15,10 @@
         justify-content: space-around;
         margin: 0 auto;
         width: 80%;
+
+    
+
+        
     }
     // FIRST COLUMN
     &__first__list{
@@ -85,6 +89,10 @@
         display: flex;
         justify-content: space-around;
         flex: 0 0 100%;
+        // MEDIA QUERIES
+        @include respond(small-phone){
+            display: none;
+           }
         &__left{
             &__title{
                 text-align: left;
